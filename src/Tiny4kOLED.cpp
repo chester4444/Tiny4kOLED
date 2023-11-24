@@ -359,13 +359,13 @@ void SSD1306Device::decodeAsciiInternal(uint8_t c) {
 
 	// händle ümläuts - qüick häck
 	//Serial.printf("%3d - %c\n", c, c);
-	if (c == 0x84) (this->*renderFn)((oledFont->last)+1); // Ä
-	if (c == 0x96) (this->*renderFn)((oledFont->last)+2); // Ö
-	if (c == 0x9C) (this->*renderFn)((oledFont->last)+3); // Ü
-	if (c == 0xA4) (this->*renderFn)((oledFont->last)+4); // ä
-	if (c == 0xB6) (this->*renderFn)((oledFont->last)+5); // ö
-	if (c == 0xBC) (this->*renderFn)((oledFont->last)+6); // ü
-	if (c == 0x9F) (this->*renderFn)((oledFont->last)+7); // ß
+	if (c == 0xA4) (this->*renderFn)((oledFont->last)+1); // ä
+	if (c == 0xB6) (this->*renderFn)((oledFont->last)+2); // ö
+	if (c == 0xBC) (this->*renderFn)((oledFont->last)+3); // ü
+	if (c == 0x9F) (this->*renderFn)((oledFont->last)+4); // ß
+	//if (c == 0x84) (this->*renderFn)((oledFont->last)+5); // Ä
+	//if (c == 0x96) (this->*renderFn)((oledFont->last)+6); // Ö
+	//if (c == 0x9C) (this->*renderFn)((oledFont->last)+7); // Ü
 
 	if (oledFont->first <= c &&
 	    oledFont->last >= c)
